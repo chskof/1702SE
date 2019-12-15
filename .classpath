@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/bcel-6.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/commons-DBCP-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/EntryLoggingAgent.jar"/>
+	<classpathentry kind="lib" path="lib/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.8-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.8.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

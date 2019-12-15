@@ -1,0 +1,185 @@
+
+<startSystem>25</startSystem>
+<startChannel>01</startChannel>
+<startFlow>176220020007</startFlow>
+<startDate>2018-09-06</startDate>
+<startTime>2018-09-06 15:32:24.560</startTime>
+<lastSystem>25</lastSystem>
+<lastChannel>01</lastChannel>
+<lastFlow>176220020007</lastFlow>
+<tradeCode>684033</tradeCode>
+<flowId>53003</flowId>
+<systemDate>2018-09-06</systemDate>
+<systemTime>16:22:23</systemTime>
+<lastDate>2018-09-06</lastDate>
+<lastTime />
+<nextSystem />
+<nextChannel />
+<nextFlow>22431</nextFlow>
+<nextDate>2018-09-06</nextDate>
+<nextTime>16.21.28</nextTime>
+<errorCode>0000</errorCode>
+<error>划转成功</error>
+<resultCode>02</resultCode>
+
+<request>
+<?xml version="1.0"
+	encoding="UTF-8"?>
+	<Service>
+		<Service_Header>
+			<EXTERNAL_RULE>OFF</EXTERNAL_RULE>
+			<msg_interval>30</msg_interval>
+			<msg_expiry>36000</msg_expiry>
+			<processes currentprocess="1" nextprocess="1" total="1">
+				<process id="1">
+					<end_timestamp />
+					<process_timestamp>2018-06-14
+						16:18:33.918
+					</process_timestamp>
+					<target_q>IBM.SERVICE.REQUEST.OUT.LOAN</target_q>
+					<sub_target_id />
+					<target_id>0007</target_id>
+					<sub_service_sn>176220020007</sub_service_sn>
+					<async_reversal_service_id />
+					<is_end>0</is_end>
+					<skip_to_process>0</skip_to_process>
+					<after_logic_class />
+					<timeout>30000</timeout>
+					<reversal_seq>0</reversal_seq>
+					<key_service>0</key_service>
+					<status>INPROCESS</status>
+					<service_id>00070000684033</service_id>
+				</process>
+			</processes>
+			<msglog>1</msglog>
+			<timeout>30000</timeout>
+			<name>保函行内结清</name>
+			<service_id>00070000684033</service_id>
+			<requester_id>0025</requester_id>
+			<channel_id>14</channel_id>
+			<service_time>2018-06-14
+				15:32:24.560
+			</service_time>
+			<version_id>01</version_id>
+			<route_flag>99</route_flag>
+			<common />
+			<service_response />
+			<service_sn>176220020007</service_sn>
+			<start_timestamp>2018-06-14 16:18:33.914</start_timestamp>
+		</Service_Header>
+		<Service_Body>
+			<ext_attributes>
+				<req_serv_id>684033</req_serv_id>
+				<iterate_no>00</iterate_no>
+				<requester_id>25</requester_id>
+				<channel_id>01</channel_id>
+				<ori_req_id>25</ori_req_id>
+				<ori_cha_id>01</ori_cha_id>
+				<req_servcode>070604</req_servcode>
+				<channel_servcode>070604</channel_servcode>
+				<ori_req_servcode>070604</ori_req_servcode>
+				<ori_cha_servcode>070604</ori_cha_servcode>
+				<terminal_id>ttyp</terminal_id>
+				<branch_id>17632</branch_id>
+				<operator_id>176220</operator_id>
+				<sub_auth_teller>176231</sub_auth_teller>
+				<auth_psw01 />
+				<bran_auth_teller />
+				<auth_psw02 />
+				<cen_auth_teller01 />
+				<auth_psw03 />
+				<cen_auth_teller02 />
+				<ori_req_date>2018-09-06</ori_req_date>
+				<ori_req_sn>176220020007</ori_req_sn>
+				<ori_req_timestamp>2018-09-06
+					15:32:24.560
+				</ori_req_timestamp>
+				<requester_date>2018-09-06</requester_date>
+				<requester_sn>176220020007</requester_sn>
+				<mac_value />
+			</ext_attributes>
+			<request>
+				<I1BAKUP1 />
+				<I1BAKUP2 />
+				<I1BAKUP3>0</I1BAKUP3>
+				<I1APPVID>1809030013</I1APPVID>
+			</request>
+			<response />
+		</Service_Body>
+	</Service>
+</request>
+
+
+<response>
+<?xml version="1.0"
+	encoding="UTF-8"?>
+	<Service>
+		<Service_Header>
+			<EXTERNAL_RULE>OFF</EXTERNAL_RULE>
+			<msg_interval>30</msg_interval>
+			<msg_expiry>36000</msg_expiry>
+			<processes currentprocess="1" nextprocess="1" total="1">
+				<process id="1">
+					<end_timestamp />
+					<process_timestamp>2018-06-14
+						16:18:33.918
+					</process_timestamp>
+					<target_q>IBM.SERVICE.REQUEST.OUT.LOAN</target_q>
+					<sub_target_id />
+					<target_id>0007</target_id>
+					<sub_service_sn>176220020007</sub_service_sn>
+					<async_reversal_service_id />
+					<is_end>0</is_end>
+					<skip_to_process>0</skip_to_process>
+					<after_logic_class />
+					<timeout>30000</timeout>
+					<reversal_seq>0</reversal_seq>
+					<key_service>0</key_service>
+					<status>INPROCESS</status>
+					<service_id>00070000684033</service_id>
+				</process>
+			</processes>
+			<msglog>1</msglog>
+			<timeout>30000</timeout>
+			<name>保函行内结清</name>
+			<service_id>00070000684033</service_id>
+			<requester_id>0025</requester_id>
+			<channel_id>14</channel_id>
+			<service_time>2018-06-14
+				15:32:24.560
+			</service_time>
+			<version_id>01</version_id>
+			<route_flag>99</route_flag>
+			<common />
+			<service_response />
+			<service_sn>176220020007</service_sn>
+			<start_timestamp>2018-06-14 16:18:33.914</start_timestamp>
+		</Service_Header>
+		<Service_Body>
+			<ext_attributes>
+				<O1F1MSID>0000</O1F1MSID>
+				<O1F1MSGE>划转成功</O1F1MSGE>
+				<O1F2NUMB>0</O1F2NUMB>
+				<O1F1WKDT>2018-09-06</O1F1WKDT>
+				<O1F1TRWB>53003</O1F1TRWB>
+				<O1F1WKTM>16:22:24</O1F1WKTM>
+			</ext_attributes>
+			<response>
+				<O1GUARANTEENO>FBH1763220180903010006</O1GUARANTEENO>
+				<O1GUARANTEETYPE>01</O1GUARANTEETYPE>
+				<O1BLAMON>50000.00</O1BLAMON>
+				<O1OTBLAC>176027401000006945</O1OTBLAC>
+				<O1OTBLA1>永丰县华明实业有限公司</O1OTBLA1>
+				<O1CURRCY>01</O1CURRCY>
+				<O1BZACNO>176320099000376586</O1BZACNO>
+				<O1BZSANO>000008</O1BZSANO>
+				<O1BZACNM />
+				<O1ICCTNM>勇捌</O1ICCTNM>
+				<O1ICCTAC>17632</O1ICCTAC>
+				<O1BAKUP1 />
+				<O1BAKUP2 />
+				<O1BAKUP3>0</O1BAKUP3>
+			</response>
+		</Service_Body>
+	</Service>
+</response>
