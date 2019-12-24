@@ -12,13 +12,11 @@ import org.junit.Test;
 
 
 public class ChsTest {
+	
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
 	}
 
-
-	
-	
 	@Test
 	public void test1() {
 		Student stu = new Student(1,"小明",10);
@@ -108,6 +106,14 @@ public class ChsTest {
 		String state3 = "dfaf";
 		
 		System.out.println(state2.replace("反馈完成", "督办管理员签收"));
+	}
+	
+	@Test
+	public void test12() {
+		String month1 = "2个月";
+		String month2 = "12个月";
+		
+		System.out.println(month2.substring(0,month2.length()-2));
 	}
 	
 }
