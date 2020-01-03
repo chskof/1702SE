@@ -116,6 +116,13 @@ public class ChsTest {
 		System.out.println(month2.substring(0,month2.length()-2));
 	}
 	
+	@Test
+	public void test13() {
+		Long a = 12L;
+		Long b = 13L;
+		System.out.println(a.equals(b));
+	}
+	
 }
 
 
