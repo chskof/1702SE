@@ -123,6 +123,18 @@ public class ChsTest {
 		System.out.println(a.equals(b));
 	}
 	
+	@Test
+	public  void test14(){
+		String a = "abdc/dfd";
+		String b = "fdf";
+		if(b.indexOf("/") != -1) {
+			System.out.println(b.substring(0, b.indexOf("/")));
+		}else {
+			System.out.println(b.indexOf("/"));
+		}
+		
+	}
+	
 }
 
 
