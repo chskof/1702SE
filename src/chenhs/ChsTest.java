@@ -135,6 +135,18 @@ public class ChsTest {
 		
 	}
 	
+	@Test
+	public void test15() {
+//		 String REGEX_CHINESE = "[\u4e00-\u9fa5]";// 中文正则
+	     String str = "中文12]3中文qwer";
+	        // 去除中文
+//	        Pattern pat = Pattern.compile(REGEX_CHINESE);
+//	        Matcher mat = pat.matcher(str);
+//	        String string = mat.replaceAll("");
+	        
+	        String string = str.replaceAll("[\u4e00-\u9fa5]", "");
+	        System.out.println(string);
+	}
 }
 
 
