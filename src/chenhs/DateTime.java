@@ -305,4 +305,12 @@ public class DateTime {
 		print(cal);
 	}
 	
+	@Test
+	public void test14() {
+		Calendar cal=Calendar.getInstance();
+		cal.add(Calendar.DATE,7);
+		Date date = cal.getTime();
+		print(cal);
+	}
+	
 }
