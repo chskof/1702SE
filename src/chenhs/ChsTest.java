@@ -1,6 +1,7 @@
 package chenhs;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -146,6 +147,18 @@ public class ChsTest {
 	        
 	        String string = str.replaceAll("[\u4e00-\u9fa5]", "");
 	        System.out.println(string);
+	}
+	
+	@Test
+	public void test16() {
+		
+		String init = "0";
+		for (int i =0 ;i<20;i++) {//模拟点击20次
+			init =  String.valueOf((Integer.parseInt(init) + 1)); 
+			init=String.format("%06d", Integer.parseInt(init));//第二个参数为int类型，0代表前面要补的字符 10代表字符串长度,d表示参数为整数类型
+			System.out.println(init);
+		}
+		
 	}
 }
 
