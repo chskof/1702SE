@@ -123,6 +123,22 @@ public class ChsTest {
 		System.out.println(a.equals(b));
 	}
 	
+	@Test
+	public void test14() {
+		String str = "【省公司-综合部】- 程晓晨：";
+		
+		System.out.println(removeprefix(str));
+	}
+	
+	private String removeprefix(String str){
+		if(str.contains("【") && str.contains("】-") && str.contains("：")) {
+			int i = str.indexOf("：")+1;
+			int size = str.length();
+			str = str.substring(str.indexOf("：")+1);
+		}
+		return str;
+	}
+	
 }
 
 
