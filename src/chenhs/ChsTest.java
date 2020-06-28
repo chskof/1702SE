@@ -1,6 +1,7 @@
 package chenhs;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -123,13 +124,6 @@ public class ChsTest {
 		System.out.println(a.equals(b));
 	}
 	
-	@Test
-	public void test14() {
-		String str = "【省公司-综合部】- 程晓晨：";
-		
-		System.out.println(removeprefix(str));
-	}
-	
 	private String removeprefix(String str){
 		if(str.contains("【") && str.contains("】-") && str.contains("：")) {
 			int i = str.indexOf("：")+1;
@@ -139,6 +133,42 @@ public class ChsTest {
 		return str;
 	}
 	
+	public  void test14(){
+		String a = "abdc/dfd";
+		String b = "fdf";
+		if(b.indexOf("/") != -1) {
+			System.out.println(b.substring(0, b.indexOf("/")));
+		}else {
+			System.out.println(b.indexOf("/"));
+		}
+		
+	}
+	
+	@Test
+	public void test15() {
+//		 String REGEX_CHINESE = "[\u4e00-\u9fa5]";// 中文正则
+	     String str = "中文12]3中文qwer";
+	        // 去除中文
+//	        Pattern pat = Pattern.compile(REGEX_CHINESE);
+//	        Matcher mat = pat.matcher(str);
+//	        String string = mat.replaceAll("");
+	        
+	        String string = str.replaceAll("[\u4e00-\u9fa5]", "");
+	        System.out.println(string);
+	}
+	
+	@Test
+	public void test16() {
+		
+		String init = "0";
+		for (int i =0 ;i<20;i++) {//模拟点击20次
+			init =  String.valueOf((Integer.parseInt(init) + 1)); 
+			init=String.format("%06d", Integer.parseInt(init));//第二个参数为int类型，0代表前面要补的字符 10代表字符串长度,d表示参数为整数类型
+			System.out.println(init);
+		}
+		
+	}
+
 }
 
 
