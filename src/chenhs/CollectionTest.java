@@ -8,14 +8,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Set;
-import java.util.Map.Entry;
 
 import org.junit.Test;
 
@@ -388,5 +388,14 @@ public class CollectionTest {
 			String s = stack.pop();
 			System.out.println(s); 
 		}
+	}
+	
+	@Test
+	public void test13() {
+		//Collections类中提供了多个synchronizedXXX()方法,该方法可以将指定集合包装成线程同步的集合,从而可以解决多线程并发访问集合石的线程安全问题
+		Collection c = Collections.synchronizedCollection(new ArrayList());
+		List list = Collections.synchronizedList(new ArrayList());
+		Set s = Collections.synchronizedSet(new HashSet());
+		Map m = Collections.synchronizedMap(new HashMap());
 	}
 }
