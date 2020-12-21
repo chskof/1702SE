@@ -3,9 +3,13 @@ package chenhs;
 import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.junit.Test;
 
@@ -167,22 +171,55 @@ public class ChsTest {
 	public void test17() {
 		
 		
-		File[] list = new File("E:\\TDOWNLOAD").listFiles();
-        for(File file : list)
-        {
-           if(file.isFile())
-           {
-               if (file.getName().endsWith(".mp4")) {
-                   // 就输出该文件的绝对路径
-               //    System.out.println(file.getAbsolutePath());
-                   System.out.println(file.getName());
-               }
-
-           }
-        }
+		File[] list = new File("E:\\test").listFiles();
+		List<String> fileNameList = new ArrayList<>();
+//        for(File file : list)
+//        {
+//           if(file.isFile())
+//           {
+//               if (file.getName().endsWith(".tmp")) {
+//                   // 就输出该文件的绝对路径
+//                   System.out.println(file.getAbsolutePath());
+////                   System.out.println(file.getName());
+//                   fileNameList.add(file.getName());
+//               }
+//
+//           }
+//        }
+		
+		fileNameList.add("12.tmp");
+		fileNameList.add("11.tmp");
+		fileNameList.add("10.tmp");
+		fileNameList.add("9.tmp");
+		fileNameList.add("8.tmp");
+		fileNameList.add("17.tmp");
+		fileNameList.add("7.tmp");
+		fileNameList.add("2.tmp");
+		fileNameList.add("20.tmp");
+		fileNameList.add("1.tmp");
+		fileNameList.add("0.tmp");
+		
+	
+		
+		
+        System.out.println(fileNameList);
+        
+        fileNameList =   fileNameList.stream().sorted(Comparator.comparingInt(a -> Integer.parseInt(a.substring(0, a.lastIndexOf("."))))
+	            ).collect(Collectors.toList());
+        
+//        Collections.sort(fileNameList);
+        
+        System.out.println(fileNameList);
+        
+        
 	}
 	
-	
+	@Test
+	public void test18() {
+		String a = "1.tmp";
+		String b = a.substring(0, a.lastIndexOf("."));
+		System.out.println(b);
+	}
 
 }
 
