@@ -1,10 +1,8 @@
 package chenhs;
 
-import java.io.UnsupportedEncodingException;
-import java.text.DecimalFormat;
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -14,10 +12,6 @@ import org.junit.Test;
 
 public class ChsTest {
 	
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		
-	}
-
 	@Test
 	public void test1() {
 		Student stu = new Student(1,"小明",10);
@@ -168,6 +162,25 @@ public class ChsTest {
 		}
 		
 	}
+	
+	@Test
+	public void test17() {
+		File[] list = new File("E:\\TDOWNLOAD").listFiles();
+        for(File file : list)
+        {
+           if(file.isFile())
+           {
+               if (file.getName().endsWith(".mp4")) {
+                   // 就输出该文件的绝对路径
+               //    System.out.println(file.getAbsolutePath());
+                   System.out.println(file.getName());
+               }
+
+           }
+        }
+	}
+	
+	
 
 }
 
