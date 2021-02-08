@@ -5,9 +5,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -219,6 +219,42 @@ public class ChsTest {
 		String a = "1.tmp";
 		String b = a.substring(0, a.lastIndexOf("."));
 		System.out.println(b);
+	}
+	
+	@Test
+	public void test19() {
+		HashSet<String> phoneList = new HashSet();
+		phoneList.add("");
+		phoneList.add("");
+		phoneList.add("1");
+		phoneList.add("2");
+		phoneList.add("3");
+		System.out.println(phoneList);
+		
+		phoneList.remove("");
+		
+		System.out.println(phoneList);
+		
+		String phones = "";
+		for (String pho : phoneList) {
+			phones = phones + pho + ",";
+		}
+		if(phones.endsWith(",")) {
+			phones = phones.substring(0, phones.length()-1);
+		}
+		System.out.println(phones);
+	}
+	
+	@Test
+	public void test20() {
+		List<String> list = new ArrayList<>();
+		list.add("2020-01-01");
+		list.add("2020-01-02");
+		list.add("2020-01-03");
+		list.add("2020-01-02");
+		list.add("2020-01-03");
+		list = list.stream().distinct().collect(Collectors.toList());
+		System.out.println(list);
 	}
 
 }
