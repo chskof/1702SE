@@ -1,14 +1,24 @@
 package chenhs;
 
 import java.io.File;
+import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.junit.Test;
@@ -256,7 +266,169 @@ public class ChsTest {
 		list = list.stream().distinct().collect(Collectors.toList());
 		System.out.println(list);
 	}
+	
+	@Test
+	public void test21() {
+		String ruleSql = "delete";
+		
+		String reg = "(\\bdelete\\b)|(\\binsert\\b)|(\\bupdate\\b)";
+		Pattern pattern=Pattern.compile(reg);
+		Matcher matcher=pattern.matcher(ruleSql);
+		
+		System.out.println(matcher.find());
+		
+        if(matcher.find()){
+           System.out.println("匹配到了");
+        }else {
+        	System.out.println("no");
+        }
+		
+	}
+	
+	@Test
+	public void test22() {
+		
+	    String ruleSql = "update";
 
+        String reg = "(\\bdelete\\b)|(\\binsert\\b)|(\\bupdate\\b)";
+        if(Pattern.matches(reg, ruleSql.toLowerCase())){
+           System.out.println("000");
+        }
+		
+	}
+	
+	@Test 
+	public void test23() {
+		 LocalDate today = LocalDate.now();
+	        LocalDate lastWeekDay = today.minusWeeks(1);  //上周的此刻
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+	        String lastWeekDaystr =  formatter.format(lastWeekDay);
+	        System.out.println(lastWeekDaystr);
+	}
+	
+	
+	@Test
+	public void getSize() {
+		long size = 1500L;
+		double s = (double) size;
+		String unit;
+		if (size != -1L) {
+			int l;
+			if (size < 1024L) {
+				l = 0;
+			} else if (size < 1024L * 1024L) {
+				l = 1;
+				s = (double) size / 1024L;
+			} else {
+				for (l = 2; size >= 1024L * 1024L; l++) {
+					size = size / 1024L;
+					if ((size / 1024L) < 1024L) {
+						s = (double) size / 1024L;
+						break;
+					}
+				}
+			}
+
+			switch (l) {
+			case 0:
+				unit = "Byte";
+				break;
+
+			case 1:
+				unit = "KB";
+				break;
+			case 2:
+				unit = "MB";
+				break;
+			case 3:
+				unit = "GB";
+				break;
+			case 4:
+				// 不可能也不该达到的值
+				unit = "TB";
+				break;
+			default:
+				// ER代表错误
+				unit = "ER";
+
+			}
+			String format = String.format("%.2f", s);
+			System.out.println(format + unit);
+		}
+		return;
+	}
+	
+	@Test
+	public void test24() {
+		SecureRandom random  = new SecureRandom();
+		
+	}
+
+	@Test
+	public void test25() {
+		String code1 = "999949";
+	       String order = code1.substring(4);
+           int numcode=Integer.valueOf(order).intValue()+1;
+
+           String numStr = "";
+           if(numcode < 10){//左补0
+               numStr = "0" + String.valueOf(numcode);
+           }else{
+               numStr = String.valueOf(numcode);
+           }
+
+           String usercode = "9999" + numStr;
+           System.out.println(usercode);
+	}
+	
+	@Test
+	public void test26() {
+		 
+			String a = "123456789";
+			String b = a.substring(a.length());
+			System.out.println(b);
+	}
+	
+	@Test
+	public void test27() {
+		Map<String,Object> map = new HashMap<>();
+		map.put("name", 1);
+		String a = (String)map.get("role");
+		System.out.println(a);
+	}
+	
+	@Test
+	public void test28() {
+		
+
+		String[] staffs = new String[]{"Tom", "Bob", "Jane"};
+		 
+		List staffsList = Arrays.asList(staffs);
+		System.out.println(staffsList);
+		 
+//		Set result = new HashSet(staffsList);
+//		System.out.println(result);
+		
+		 Collections.shuffle(staffsList);
+		
+		
+//		List list = new ArrayList<>(result);
+		System.out.println(staffsList);
+		
+	}
+	
+	@Test
+	public void test29() {
+		
+		Random random = new Random();
+		
+		for (int i=0;i<80;i++) {
+			int n = random.nextInt(60);
+			System.out.println(n);
+		}
+		
+	}
+	
 }
 
 

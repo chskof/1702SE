@@ -1,10 +1,8 @@
 package chenhs;
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.RandomAccessFile;
 import java.net.URL;
 import java.util.Date;
 import java.util.Properties;

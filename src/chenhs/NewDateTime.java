@@ -239,6 +239,19 @@ public class NewDateTime {
 	}
 	
 	@Test
+	public void testMinus() {
+		LocalDate today = LocalDate.now();
+		LocalDate lastWeek = today.minusWeeks(1);
+		
+		
+		System.out.println(lastWeek);
+		
+		
+	
+		
+	}
+	
+	@Test
 	public void test12() {
 		LocalDate today = LocalDate.now();
 		LocalDate previousYear = today.minus(1,ChronoUnit.YEARS);
